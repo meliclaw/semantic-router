@@ -10,7 +10,7 @@ description = "Meliclaw Intent Classifier — Rust port of the semantic routing 
 readme = "README.md"
 
 [features]
-default = ["local-index"]
+default = ["local-index", "hybrid"]
 local-index = []
 hybrid = []
 openai = ["dep:reqwest"]
