@@ -3,9 +3,9 @@
 Producto interno: **Meliclaw Intent Classifier**.
 
 - Crate: [`meliclaw-intent-router`](crates/meliclaw-intent-router)
+- Servicio: [`meliclaw-intent-router-service`](crates/meliclaw-intent-router-service)
 - Rama de trabajo: `meliclaw-intent-router-main`
 - Espejo upstream: `main` (no modificar)
-- HTTP facade y hybrid/indexes: PRs siguientes
 
 Port Rust (MIT, obra derivada) del algoritmo publicado en
 https://github.com/aurelio-labs/semantic-router
@@ -18,6 +18,7 @@ Meliclaw es el workspace Cargo.
 
 ```bash
 cargo test -p meliclaw-intent-router
+cargo run -p meliclaw-intent-router-service
 ```
 
 Capas 2–3 (waterfall + RRF) **no** están en este repositorio.

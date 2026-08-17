@@ -1,0 +1,11 @@
+services:
+  intent-router:
+    build:
+      context: ../..
+      dockerfile: crates/meliclaw-intent-router-service/Dockerfile
+    image: meliclaw-intent-router-service:local
+    ports:
+      - "8091:8091"
+    environment:
+      MELICLAW_ENCODER: hash
+      MELICLAW_INTENT_BIND: 0.0.0.0:8091

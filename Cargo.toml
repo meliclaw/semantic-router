@@ -2,6 +2,7 @@
 resolver = "2"
 members = [
     "crates/meliclaw-intent-router",
+    "crates/meliclaw-intent-router-service",
 ]
 
 [workspace.package]
