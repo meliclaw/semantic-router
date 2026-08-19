@@ -11,6 +11,11 @@ venv/
 **/*.py[cod]
 
 
+# Rust
+/target
+**/*.rs.bk
+Cargo.lock.bak
+
 # local env files
 .env*.local
 .env
@@ -30,7 +35,6 @@ package-lock.json
 package.json
 test.ipynb
 test_sync.ipynb
-```
 
 # docs
 docs/build

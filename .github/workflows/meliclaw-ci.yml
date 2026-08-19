@@ -1,0 +1,35 @@
+name: meliclaw-ci
+
+on:
+  push:
+    branches: [main, meliclaw-intent-router-main]
+  pull_request:
+    branches: [main, meliclaw-intent-router-main]
+
+jobs:
+  license-and-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: License drift
+        run: |
+          git remote add upstream https://github.com/aurelio-labs/semantic-router.git || true
+          git fetch upstream main --depth=1 || true
+          bash scripts/check-license-drift.sh
+      - name: Image audit
+        run: bash scripts/check-image-licenses.sh
+
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Test
+        run: cargo test --workspace --all-targets
+      - name: cargo-deny
+        uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          command: check
+          arguments: --manifest-path Cargo.toml
