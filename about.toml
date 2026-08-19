@@ -1,6 +1,8 @@
 # cargo-about config for THIRD_PARTY_NOTICES generation.
-# Model-weight licenses (OpenMDW-1.1 for Nemotron-3-Embed-1B, etc.) are not
-# crate licenses; they live in the hand-written embedding section of
+# Model-weight licenses (OpenMDW-1.1 for Nemotron-3-Embed-1B,
+# Apache-2.0 for Qwen3-Embedding, Qwen3-VL-Embedding, and gte-Qwen2-7B-instruct,
+# CC-BY-NC-4.0 for jina-embeddings-v3 and NV-Embed-v2) are not crate
+# licenses; they live in the hand-written embedding section of
 # THIRD_PARTY_NOTICES.md and scripts/gen-third-party-notices.sh.
 accepted = [
     "MIT",

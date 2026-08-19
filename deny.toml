@@ -2,7 +2,9 @@
 # Guía Meliclaw §5 check 4.
 #
 # OpenMDW-1.1 aplica a pesos NVIDIA Nemotron-3-Embed-1B, no a crates de Rust.
-# No añadir OpenMDW a allow/deny: cargo-deny no inspecciona artefactos .onnx.
+# Apache-2.0 aplica a pesos Qwen3-Embedding, Qwen3-VL-Embedding y gte-Qwen2-7B-instruct (Alibaba/Qwen).
+# CC-BY-NC-4.0 aplica a pesos jina-embeddings-v3 y NV-Embed-v2; tampoco es crate.
+# No añadir OpenMDW ni CC-BY-NC a allow/deny: cargo-deny no inspecciona artefactos .onnx.
 # Registro: THIRD_PARTY_NOTICES.md.
 
 [graph]

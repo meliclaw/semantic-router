@@ -29,6 +29,9 @@
 | 2026-08-16 | `scripts/*`, `deny.toml`, `.github/workflows/meliclaw-ci.yml` | CI de licencias e imágenes | Guía Meliclaw §5 |
 | 2026-08-16 | `THIRD_PARTY_NOTICES.md` | Atribución factual MIT | Guía §6 |
 | 2026-08-17 | `crates/meliclaw-intent-router/src/encoder/{models,onnx,ollama}.rs`, `THIRD_PARTY_NOTICES.md` | Cablear Nemotron-3-Embed-1B (id + dim 2048 + OpenMDW-1.1) en OnnxEncoder / OllamaEncoder | Embedding GPU/HTTP Capa 1 (v5.4 §14.2) |
+| 2026-08-19 | `crates/meliclaw-intent-router/src/encoder/{models,onnx,ollama,mod}.rs`, `THIRD_PARTY_NOTICES.md` | Cablear Qwen3-Embedding-0.6B (1024) y 8B (4096); last-token+L2 para ONNX Qwen3; sin 4B ni default 8B | Embedding Qwen Capa 1 (Apache-2.0) |
+| 2026-08-19 | `crates/meliclaw-intent-router/src/encoder/{models,onnx,ollama,mod,lib}.rs`, `THIRD_PARTY_NOTICES.md` | Cablear jina-v3 (1024, no 8192), NV-Embed-v2 (4096 latent-attention), Qwen3-VL-Embedding-2B/8B (2048/4096, texto) | Catálogo Capa 1 adicional |
+| 2026-08-19 | `crates/meliclaw-intent-router/src/encoder/{models,onnx,ollama,mod,openai}.rs`, `crates/meliclaw-intent-router-cli/src/allowlist.rs`, `THIRD_PARTY_NOTICES.md` | Cablear gte-Qwen2-7B-instruct (3584, no 4096; last-token+L2; Apache-2.0; Q4_K_M hf.co second-state) | Embedding GTE-Qwen2 Capa 1 opcional/pesado |
 
 ## Fuera de este repo (Capas 2–3)
 
