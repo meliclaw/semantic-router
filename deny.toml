@@ -1,5 +1,9 @@
 # cargo-deny: bloquea copyleft no permisivo en el artefacto publicado.
 # Guía Meliclaw §5 check 4.
+#
+# OpenMDW-1.1 aplica a pesos NVIDIA Nemotron-3-Embed-1B, no a crates de Rust.
+# No añadir OpenMDW a allow/deny: cargo-deny no inspecciona artefactos .onnx.
+# Registro: THIRD_PARTY_NOTICES.md.
 
 [graph]
 all-features = false
