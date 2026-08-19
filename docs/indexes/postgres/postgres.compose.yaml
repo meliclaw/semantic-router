@@ -1,8 +1,9 @@
 version: '3.8'
 
+# Meliclaw: pin pgvector/pgvector:pg17 (never postgres:latest).
 services:
   pgvector:
-    build: .
+    image: pgvector/pgvector:pg17
     environment:
       POSTGRES_DB: semantic_router
       POSTGRES_USER: admin
