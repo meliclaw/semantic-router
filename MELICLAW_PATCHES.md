@@ -28,6 +28,7 @@
 | 2026-08-16 | `crates/meliclaw-intent-router-service/**` | Servicio Axum `POST /v1/route` | Hermes / knowledge-mcp |
 | 2026-08-16 | `scripts/*`, `deny.toml`, `.github/workflows/meliclaw-ci.yml` | CI de licencias e imágenes | Guía Meliclaw §5 |
 | 2026-08-16 | `THIRD_PARTY_NOTICES.md` | Atribución factual MIT | Guía §6 |
+| 2026-08-17 | `crates/meliclaw-intent-router/src/encoder/{models,onnx,ollama}.rs`, `THIRD_PARTY_NOTICES.md` | Cablear Nemotron-3-Embed-1B (id + dim 2048 + OpenMDW-1.1) en OnnxEncoder / OllamaEncoder | Embedding GPU/HTTP Capa 1 (v5.4 §14.2) |
 
 ## Fuera de este repo (Capas 2–3)
 
