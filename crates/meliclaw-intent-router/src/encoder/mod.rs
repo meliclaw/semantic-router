@@ -2,6 +2,7 @@
 //! Modified by Meliclaw, 2026. Original work Copyright 2024 Aurelio AI.
 
 mod hash;
+mod models;
 mod onnx;
 
 #[cfg(feature = "hybrid")]
@@ -20,6 +21,12 @@ use crate::error::Result;
 use crate::schema::SparseEmbedding;
 
 pub use hash::HashDenseEncoder;
+pub use models::{
+    expect_embedding_dim, require_dimensions, resolve_dense_model, DenseModelSpec,
+    NEMOTRON_3_EMBED_1B_DIM, NEMOTRON_3_EMBED_1B_ID, NEMOTRON_3_EMBED_1B_OLLAMA_TAG,
+    NEMOTRON_3_EMBED_1B_ONNX_EXPORT, NEMOTRON_3_EMBED_1B_ONNX_FILE,
+    NEMOTRON_3_EMBED_1B_ONNX_FP16_FILE,
+};
 pub use onnx::OnnxEncoder;
 
 #[cfg(feature = "hybrid")]

@@ -20,13 +20,17 @@ pub use config::RouterConfig;
 pub use encoder::OllamaEncoder;
 #[cfg(feature = "openai")]
 pub use encoder::OpenAiEncoder;
-pub use encoder::{DenseEncoder, HashDenseEncoder, OnnxEncoder, SparseEncoder};
+pub use encoder::{
+    DenseEncoder, HashDenseEncoder, OnnxEncoder, SparseEncoder, NEMOTRON_3_EMBED_1B_DIM,
+    NEMOTRON_3_EMBED_1B_ID, NEMOTRON_3_EMBED_1B_OLLAMA_TAG, NEMOTRON_3_EMBED_1B_ONNX_EXPORT,
+    NEMOTRON_3_EMBED_1B_ONNX_FILE, NEMOTRON_3_EMBED_1B_ONNX_FP16_FILE,
+};
 pub use error::{Error, Result};
-pub use index::{Index, LocalIndex};
 #[cfg(feature = "postgres")]
 pub use index::PostgresIndex;
 #[cfg(feature = "qdrant")]
 pub use index::QdrantIndex;
+pub use index::{Index, LocalIndex};
 pub use memory_routes::memory_intent_routes;
 pub use route::Route;
 pub use router::{Aggregation, RouteRequest, SemanticRouter};

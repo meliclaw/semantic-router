@@ -37,6 +37,12 @@ pub enum Error {
     SyncConflict,
     #[error("onnx: {0}")]
     Onnx(String),
+    #[error("embedding dimension mismatch for {model}: expected {expected}, got {got}")]
+    DimensionMismatch {
+        model: String,
+        expected: usize,
+        got: usize,
+    },
 }
 
 impl Error {

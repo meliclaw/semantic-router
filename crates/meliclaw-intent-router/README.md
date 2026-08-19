@@ -34,6 +34,16 @@ let choice = router.route("¿Cuál es el NIF del cliente Y?").await?;
 
 Sin modelo ONNX, `HashDenseEncoder` cubre tests y bootstrap local.
 
+## Modelos de embedding locales
+
+| Modelo | Encoder | Dim | Uso |
+|---|---|---|---|
+| `nomic-embed-text-v1.5` | `OnnxEncoder` | 768 | Default CPU/edge |
+| `bge-m3` | `OnnxEncoder` | 1024 | ONNX |
+| `nvidia/Nemotron-3-Embed-1B-BF16` | `OnnxEncoder` (GPU) / `OllamaEncoder` (HTTP) | **2048** | Capa 1 GPU. Tag Ollama/NIM: `nemotron-3-embed-1b`. Pesos OpenMDW-1.1. No hay ONNX oficial NVIDIA; `MELICLAW_ONNX_MODEL` apunta a un `.onnx` local (`model.onnx` o `fp16/model.onnx`). CPU casi seguro fuera de 10–30 ms. |
+
+ColNomic Embed Multimodal 7B **no** entra en este crate.
+
 ## Servicio HTTP
 
 Crate `meliclaw-intent-router-service`:
